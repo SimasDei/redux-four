@@ -5,6 +5,7 @@ import Navbar from './components/layouts/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
 import Signin from './components/auth/Signin';
+import Signup from './components/auth/Signup';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/signin" component={Signin} />
+          <Route exact path="/signin" component={Signup} />
           <Route exact path="project/:id" component={ProjectDetails} />
           <Route exact path="/" component={Dashboard} />
         </Switch>
