@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route to="project/:id" component={ProjectDetails} />
-          <Route exact to="/" component={Dashboard} />
-          <Route exact to="/signin" component={Signin} />
+          <Route exact path="/signin" component={Signin} />
+          <Route exact path="project/:id" component={ProjectDetails} />
+          <Route exact path="/" component={Dashboard} />
         </Switch>
       </div>
     </Router>
