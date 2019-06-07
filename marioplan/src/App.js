@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
 import Signin from './components/auth/Signin';
 import Signup from './components/auth/Signup';
+import CreateProject from './components/projects/CreateProject';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/signin" component={Signin} />
-          <Route exact path="/signin" component={Signup} />
-          <Route exact path="project/:id" component={ProjectDetails} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/project/:id" component={ProjectDetails} />
+          <Route exact path="/create" component={CreateProject} />
           <Route exact path="/" component={Dashboard} />
         </Switch>
       </div>
