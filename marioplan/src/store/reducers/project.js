@@ -14,11 +14,15 @@ const projectReducer = (state = initialState, action) => {
         projects: state.projects.push(action.payload),
       };
 
-    default:
-      break;
-  }
+    case 'CREATE_PROJECT_ERROR':
+      console.log('create project error', action.error);
+      return {
+        ...state,
+      };
 
-  return state;
+    default:
+      return state;
+  }
 };
 
 export default projectReducer;
